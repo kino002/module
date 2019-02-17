@@ -30,6 +30,10 @@ void setup() {
 
 /*setupの後、終了するまで繰り返し呼び出される関数です*/
 void loop() {
+  
+}
+
+void sesend(){
   if(cmd == 0x00){
     cmd = Wire.read();
     if(cmd == 0x01){   

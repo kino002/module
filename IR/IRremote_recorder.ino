@@ -30,14 +30,18 @@ void  dumpCode (decode_results *results)
   Serial.println("上記をコピペして");
 }
 
-
-void  loop ( )
-{
-  decode_results  results;        
+void rec(){
+   decode_results  results;        
 
   if (irrecv.decode(&results)) {  
     dumpCode(&results);           
     Serial.println("");           
     irrecv.resume();              
   }
+}
+
+
+void  loop ( )
+{
+  rec();
 }
